@@ -58,7 +58,7 @@ const handlePizzaSubmit = event => {
     method: 'POST',
     headers: {
       Accept: 'application/json',
-      'Content-type': 'application/json'
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify(formData)
   })
@@ -69,6 +69,7 @@ const handlePizzaSubmit = event => {
   })
   .catch(err => {
     console.log(err);
+    saveRecord(formData);
   });
 
 };
